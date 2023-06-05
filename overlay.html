@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="overlay.css">
+    </head>
+    <body>
+        <div id = "overlay">
+            <img id = "test">
+            </img>
+            <script type = "module">
+                import { connectServer } from "http://localhost:2999/scripts/connectWebsocket.js"
+                connectServer()
+            </script>
+            <script type = "module">
+                import { buttonSpawnEmoteCallback } from "http://localhost:2999/scripts/generateAnimation.js"
+                document.getElementById("spawnEmote").addEventListener("click", buttonSpawnEmoteCallback);
+            </script>
+        </div>
+    </body>
+</html>
